@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    
+    <!--<link href="main.css" type="text/css" rel="stylesheet">-->
+    
+    <!--<style>
+        *{
+            font-style: italic;
+        }
+
+        .title{
+            color: blue;
+        }
+
+        .refrain{
+            color: green;
+        }
+    </style>-->
+    
+    <title>타이틀 표제</title>
+</head>
+<body>
+    <h1 class="title">애국가</h1>
+    <p>동해물과 백두산이 마르고 닳도록</p>
+    <p>하느님이 보우하사 우리나라 만세</p>
+</body>
+</html>
