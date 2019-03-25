@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--tableHw.html-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="JunBeul">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+	<style>
+		table{
+			border-spacing: 15px;
+			border-collapse: separate;
+			font-size: 1.8em;
+			table-layout:auto;
+		}
+		tr, th, td{
+			text-align: center;
+			border-radius: 9px;
+			padding: 15px;
+		}
+		th, td{
+			box-shadow: 0px 5px 1px 0px gray;
+		}
+		th.time{
+			width: 60px;
+			background-color: #d3ffff;
+		}
+		th.none{
+			box-shadow: none;
+		}
+		th.date{
+			background-color: #fff1eb;
+		}
+		td{
+			background-color: #fffffb;
+			color: #fff;
+			width: 180px;
+			transition: 0.5s;
+		}
+		td:hover{
+			box-shadow: 0px 10px 10px 10px gray;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		td.auto{
+			background-color: #fa6666;
+		}
+		td.eng{
+			background-color: #ffc831;
+		}
+		td.digital{
+			background-color: #68c688;
+		}
+		td.data{
+			background-color: #4de5c8;
+		}
+		td.internet{
+			background-color: #ffa700;
+		}
+		td.cpp{
+			background-color: #3e9eff;
+		}
+		td.education{
+			background-color: #a564d4;
+		}
+		td.campus{
+			background-color: #ff57a5;
+		}
+	</style>
+	<script src="script.js"></script>
+	
+	<title>HTML5 테이블 테스트 실습</title>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<th class="none"></th>
+			<th class="date">월</th>
+			<th class="date">화</th>
+			<th class="date">수</th>
+			<th class="date">목</th>
+			<th class="date">금</th>
+		</tr>
+		<tr>
+			<th class="time">1</th>
+			<td rowspan="2" class="auto">오토마타와<br>응용</td>
+			<td></td>
+			<td rowspan="2" class="data">자료구조<br>및<br>실습</td>
+			<td class="country" rowspan="2">국가안보론</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">2</th>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">3</th>
+			<td rowspan="2" class="eng">영어 회화2</td>
+			<td rowspan="2" class="data">자료구조<br>및<br>실습</td>
+			<td></td>
+			<td class="auto">오토마타와<br>응용</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">4</th>
+			<td class="internet" rowspan="2">인터넷<br>프로그래밍</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">5</th>
+			<td></td>
+			<td class="digital">디지털<br>논리회로</td>
+			<td class="internet" rowspan="2">인터넷<br>프로그래밍</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">6</th>
+			<td rowspan="2" class="digital">디지털<br>논리회로</td>
+			<td class="cpp" rowspan="4">c++<br>프로그래밍</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">7</th>
+			<td rowspan="2" class="education">교육학개론</td>
+			<td rowspan="2" class="campus">켐퍼스<br>멘토링</td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">8</th>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="time">9</th>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
