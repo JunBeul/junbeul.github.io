@@ -110,7 +110,7 @@ nav > .navIcon > .icon{
 }
 section > .element{
 	width: 900px;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	margin-left: auto;
 	margin-right: auto;
 }
