@@ -63,6 +63,10 @@ a:hover, a:active, a:focus { text-decoration:underline }
 	margin-bottom: 100px;
 	position: static;
 }
+.subTitle > span{
+	margin-left: 50px;
+	margin-right: 50px;
+}
 nav{
 	width: 900px;
 	height: 80px;
