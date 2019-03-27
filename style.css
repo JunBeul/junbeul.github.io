@@ -61,7 +61,6 @@ a:hover, a:active, a:focus { text-decoration:underline }
 	font-size: 3em;
 	margin: 100px;
 	margin-bottom: 100px;
-	letter-spacing: 100px;
 	position: static;
 }
 nav{
@@ -70,21 +69,25 @@ nav{
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #fff;
-	position: static;
+	position: relative;
 }
 nav > .navIcon{
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	position: relative;
 	transition: 0.3s;
 	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: 12.5%;
 }
 nav > .navIcon:hover{
 	transform: rotate(90deg);
 }
 nav > .navIcon > .icon{
-	width: 45px;
-	height: 8px;
+	width: 30px;
+	height: 5px;
 	background-color: #000;
 	position: relative;
 	transform: translate(-50%, -210%);
