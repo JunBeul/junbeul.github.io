@@ -69,7 +69,7 @@ a:hover, a:active, a:focus { text-decoration:underline }
 }
 nav{
 	width: 900px;
-	height: 80px;
+	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #fff;
@@ -84,6 +84,7 @@ nav > .navIcon{
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
+	transform: rotate(0deg);
 	top: 12.5%;
 }
 nav > .navIcon:hover{
@@ -99,18 +100,69 @@ nav > .navIcon > .icon{
 	margin-top: 5px;
 	left: 50%;
 	top: 50%;
+	transition: 0.3s;
 }
-.test{
-	width: 300px;
-	height: 300px;
-	background-color: red;
-	margin: 28px;
-	display: inline-block;
-	position: static;
+nav > .navList{
+	display: none;
+	height: 0;
+	text-align: center;
+	padding: 10px;
+	transition: 0.3s;
+	text-decoration: none;
+}
+nav > .navList > li{
+	margin-top: 20px;
+	position : relative;
+	font-family: sans-serif;
+}
+nav > .navList > li > a{
+	transition: 0.3s;
+	text-decoration: none;
+}
+nav > .navList > li > a:link{
+	text-decoration: none;
+	color: #000;
+}
+nav > .navList > li > a:visited{
+	text-decoration: none;
+	color: #000;
+}
+nav > .navList > li > a:active{
+	text-decoration: none;
+	color: #000;
+}
+.navList a:before, .navList a:after{
+    position: absolute;
+    opacity: 0;
+    font-size: 1.2em;
+    top: 1.5px;
+    transition: all 0.3s;
+}
+.navList a:before{
+    content: '(';
+	font-family: 'Raleway';
+    left: 380px;
+    transform: translateX(10px);
+}
+
+.navList a:after {
+    content: ')';
+	font-family: 'Raleway';
+    right: 380px;
+    transform: translateX(-10px);
+}
+.navList a:hover:before, .navList a:hover:after{
+    opacity: 1;
+    transform: translateX(0px);
+}
+nav > .navList > li > .navListLi{
+	cursor: pointer;
+	font-size: 16pt;
 }
 section > .element{
 	width: 900px;
-	/*background-color: #fff;*/
+	height: 100%;
+	background-color: #fff;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -118,11 +170,9 @@ section > .element > .fullList{
 	width: 900px;
 	position: relative;
 	clear: left;
-	
 	transform: translate(-50%, 0);
 	left: 50%;
 }
-
 section > .element > .fullList > .aTitle{
 	width: 900px;
 	height: 80px;
@@ -135,7 +185,6 @@ section > .element > .fullList > .aTitle{
 	left: 50%;
 	border-top: 1px solid #ccc;
 }
-
 section > .element > .fullList > a > li{
 	width: 240px;
 	height: 240px;
@@ -151,7 +200,6 @@ section > .element > .fullList > a > li{
 }
 section > .element > .fullList > a > li:hover{
 	background-color: #ccc;
-	transition: 0.3s;
 }
 .clear {
 	clear: both;
