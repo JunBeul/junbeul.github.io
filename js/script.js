@@ -1,4 +1,5 @@
 $( document ).ready(function(){
+	var a = 1;
 	$( window ).scroll( function() {
 		if ($( this ).scrollTop() > 300) {
 			$('.top').css("opacity", 1);
@@ -10,7 +11,6 @@ $( document ).ready(function(){
 		$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
 		return false;
 	});
-	var a = 1;
 	$('.navIcon').click(function(){
 		if(a == 0) {
 			$('.navIcon').removeAttr("style");
