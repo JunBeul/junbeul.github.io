@@ -1,4 +1,15 @@
 $( document ).ready(function(){
+	$( window ).scroll( function() {
+		if ($( this ).scrollTop() > 300) {
+			$('.top').css("opacity", 1);
+		} else {
+			$('.top').css("opacity", 0);
+		}
+	});
+	$( '.top' ).click( function() {
+		$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+		return false;
+	});
 	var a = 1;
 	$('.navIcon').click(function(){
 		if(a == 0) {
