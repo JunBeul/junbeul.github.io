@@ -1,0 +1,27 @@
+<!DOCTYPE html> <!--formFormaction1.html-->
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="JunBeul">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>폼 학습</title>
+</head>
+
+<body>
+	<section>
+		<form action="https://jsptogo.herokuapp.com/jspsrc/formFormaction1.jsp" method="post" autocomplete="on">
+			<fieldset>
+				<legend>최단 시간 찾기</legend>
+				<label for="fromx">출발 : </label>
+				<input type="text" id="fromx" name="fromx" placeholder="출발">
+				<label for="tox">도착 : </label>
+				<input type="text" id="tox" name="tox" placeholder="도착">
+				<button type="submit">자동차</button>
+				<button type="submit" formaction="https://jsptogo.herokuapp.com/jspsrc/formPublic1.jsp">대중교통</button>
+				<button type="submit" formaction="https://jsptogo.herokuapp.com/jspsrc/formBike1.jsp">자전거</button>
+			</fieldset>
+		</form>
+	</section>
+</body>
+</html>
