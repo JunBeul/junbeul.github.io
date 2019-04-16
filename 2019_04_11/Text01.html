@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> select exam </title>
+	
+	<meta charset="UTF-8">
+	<meta name="author" content="JunBeul">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			position: static;
+		}
+		#BG{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-image: url('https://source.unsplash.com/category/nature/1600x900');
+			background-size: cover;
+		}
+		#Gra{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient( 45deg, #52e5d4, #9127aa );
+			opacity: 0.3;
+		}
+		#wapper{
+			position: absolute;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.pure-css-select-style {
+			width: 100%;
+			overflow: hidden;
+		}
+		.pure-css-select-style select {
+			width: 300px;
+			padding-right: 38px;
+			border: none;
+			box-shadow: none;
+			background: transparent;
+			background-image: none;
+			-webkit-appearance: none;
+			outline: none;
+			cursor: pointer;
+			-moz-appearance: none;
+			text-indent: 0.01px;
+			text-overflow: ellipsis;
+		}
+		.theme-square select {
+			margin: 10px;
+			padding: 12px 38px 12px 12px;
+			font: 700 16px/1 'Montserrat', sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: #27ae60;
+			background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%2327ae60%22%2F%3E%3C%2Fsvg%3E') right 10px center no-repeat;
+			border: 3px solid #27ae60;
+			transition: 0.5s;
+		}
+		.theme-square select:hover{
+			background: #fff url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211%22%20height%3D%2211%22%20viewBox%3D%220%200%2011%2011%22%3E%3Cpath%20d%3D%22M4.33%208.5L0%201L8.66%201z%22%20fill%3D%22%2327ae60%22%2F%3E%3C%2Fsvg%3E') right 20px center no-repeat;
+		}
+		h1{
+			font: 700 32px 'Montserrat', sans-serif;
+			color: #27ae60;
+		}
+	</style>
+
+	<script language="JavaScript">
+		Array.prototype.get = function(index) {
+			return this[index];
+		}
+		Array.prototype.set = function(object) {
+			this[this.length] = object;
+		}
+		Coditech = new Object();
+		Coditech.Version = "1.0.0.0";
+		Coditech.Framework = new Object();
+		Coditech.Framework.Category = function(name, value) {
+			var _name = name;
+			var _value = value;
+			var _subcategory = new Array();
+			this.getName = function() {
+				return _name;
+			}
+			this.getValue = function() {
+				return _value;
+			}
+			this.add = function(name, value) {
+				_subcategory.set(new Coditech.Framework.Category(name, value));
+			}
+			this.get = function(index) {
+				return _subcategory.get(index);
+			}
+			this.length = function() {
+				return _subcategory.length;
+			}
+		}
+
+		function addCategory(category, name, value) {
+			category.add(name, value);
+		}
+
+		ROOT_CATEGORY_NODE = new Coditech.Framework.Category("ROOT", "");
+		addCategory(ROOT_CATEGORY_NODE, "CATE_0", "제조사 선택");
+		addCategory(ROOT_CATEGORY_NODE, "CATE_1", "삼성");
+		addCategory(ROOT_CATEGORY_NODE, "CATE_2", "LG");
+		addCategory(ROOT_CATEGORY_NODE, "CATE_3", "애플");
+		addCategory(ROOT_CATEGORY_NODE, "CATE_4", "화웨이");
+
+		addCategory(ROOT_CATEGORY_NODE.get(0), "CATE_0_0", "제조사를 선택해 주세요");
+
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_0", "기기 선택");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_1", "Galaxy S");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_2", "Galaxy Note");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_3", "Galaxy Fold");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_4", "Galaxy A");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_5", "Galaxy M");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_6", "Galaxy J");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_7", "Galaxy On");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_8", "Galaxy Wide");
+		addCategory(ROOT_CATEGORY_NODE.get(1), "CATE_1_9", "Other");
+
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_0", "기기 선택");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_1", "LG G");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_2", "LG V");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_3", "LG Q");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_4", "LG X");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_5", "LG K");
+		addCategory(ROOT_CATEGORY_NODE.get(2), "CATE_2_8", "Other");
+
+
+		addCategory(ROOT_CATEGORY_NODE.get(3), "CATE_3_0", "기기 선택");
+		addCategory(ROOT_CATEGORY_NODE.get(3), "CATE_3_1", "iPhone");
+
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_0", "기기 선택");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_1", "Huawel Mate");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_2", "Huawel P");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_3", "Huawel G");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_4", "Huawel nova");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_5", "Huawel Y");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_6", "Huawel Honor");
+		addCategory(ROOT_CATEGORY_NODE.get(4), "CATE_4_7", "Other");
+
+		function initialize() {
+			var defaultForm = document.getElementById("defaultForm");
+			if (null != defaultForm) {
+				createOption(defaultForm.brand, ROOT_CATEGORY_NODE);
+				createOption(defaultForm.device, ROOT_CATEGORY_NODE.get(0));
+				createOption(defaultForm.test, ROOT_CATEGORY_NODE.get(0).get(0));
+			}
+		}
+
+		function clearSelectBox(selectBox) {
+			if (null == selectBox || null == selectBox.options) {
+				return;
+			}
+			var length = selectBox.options.length;
+			for (var index = 0; index < length; index++) {
+				selectBox.options.remove(0);
+			}
+		}
+
+		function createOption(selectBox, category) {
+			if (null == category) return;
+
+			clearSelectBox(selectBox);
+
+			for (var index = 0; index < category.length(); index++) {
+				var c = category.get(index);
+				var option = new Option();
+
+				option.value = c.getName();
+				option.text = c.getValue();
+
+				selectBox.options.add(option);
+			}
+		}
+
+		function changeSubject(form) {
+			var category = ROOT_CATEGORY_NODE.get(form.brand.selectedIndex);
+			if (null != category) {
+				createOption(form.device, category);
+				createOption(form.test, category.get(0));
+			}
+		}
+
+		function changeContents(form) {
+			var category = null;
+
+			category = ROOT_CATEGORY_NODE.get(form.brand.selectedIndex);
+			category = category.get(form.device.selectedIndex);
+
+			if (null != category) {
+				createOption(form.test, category);
+			}
+		}
+		window.onload = initialize;
+	</script>
+</head>
+
+<body>
+	<div id="BG"></div>
+	<div id="Gra"></div>
+	<div id="wapper">
+		<h1>Choose Smartphone</h1>
+		<div class="row">
+			<div class="pure-css-select-style theme-square">
+				<form name="form1" id="defaultForm" method="post">
+					<select name="brand" onchange="changeSubject(this.form)"></select>
+					<select name="device" onchange="changeContents(this.form)"></select>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
