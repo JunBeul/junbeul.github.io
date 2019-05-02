@@ -1,0 +1,94 @@
+<!DOCTYPE html><!--cssBox4.html-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		*{
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+		.box1{
+			width: 20em;
+			height: 5em;
+			background-color: beige;
+			border: 2px solid #ccc;
+			border-radius: 1em;
+			box-shadow: 9px 6px 6px #555;
+			text-align: left;
+		}
+		.bs5{
+			border-style: groove;
+		}
+		.bs6{
+			border-style: ridge;
+		}
+		.bs7{
+			border-style: inset;
+		}
+		.bs8{
+			border-style: outset;
+		}
+		.magin1{
+			margin: 20px 30px 40px 20px;
+		}
+		.lbsize1{
+			display: inline-block;
+			width: 5em;
+			height: 1.2em;
+			text-align: right;
+			padding: 0.5em;
+		}
+		.ipsize{
+			width: 10em;
+			height: 1.8em;
+		}
+		.btsize1{
+			position: relative;
+			top: -22px;
+			left: 10px;
+			width: 5em;
+			height: 4em;
+		}
+	</style>
+</head>
+<body>
+	<form class="box1 bs5 magin1" action="https://jsptogo.herokuapp.com/jspsrc/formText1.jsp" method="post">
+		<label class="lbsize1" for="namex">아이디</label>
+		<input class="ipsize" id="namex" type="text" name="namex" size="20" maxlength="20" placeholder="아이디입력">
+		<br>
+		<label class="lbsize1" for="passx">패스워드</label>
+		<input class="ipsize" id="passx" type="password" name="passx">
+		<input class="btsize1" type="submit" value="로그인">
+	</form> 
+	
+	<form class="box1 bs6 magin1" action="https://jsptogo.herokuapp.com/jspsrc/formText1.jsp" method="post">
+		<label class="lbsize1" for="namex">아이디</label>
+		<input class="ipsize" id="namex" type="text" name="namex" size="20" maxlength="20" placeholder="아이디입력">
+		<br>
+		<label class="lbsize1" for="passx">패스워드</label>
+		<input class="ipsize" id="passx" type="password" name="passx">
+		<input class="btsize1" type="submit" value="로그인">
+	</form>
+	
+	<form class="box1 bs7 magin1" action="https://jsptogo.herokuapp.com/jspsrc/formText1.jsp" method="post">
+		<label class="lbsize1" for="namex">아이디</label>
+		<input class="ipsize" id="namex" type="text" name="namex" size="20" maxlength="20" placeholder="아이디입력">
+		<br>
+		<label class="lbsize1" for="passx">패스워드</label>
+		<input class="ipsize" id="passx" type="password" name="passx">
+		<input class="btsize1" type="submit" value="로그인">
+	</form> 
+	
+	<form class="box1 bs8 magin1" action="https://jsptogo.herokuapp.com/jspsrc/formText1.jsp" method="post">
+		<label class="lbsize1" for="namex">아이디</label>
+		<input class="ipsize" id="namex" type="text" name="namex" size="20" maxlength="20" placeholder="아이디입력">
+		<br>
+		<label class="lbsize1" for="passx">패스워드</label>
+		<input class="ipsize" id="passx" type="password" name="passx">
+		<input class="btsize1" type="submit" value="로그인">
+	</form> 
+</body>
+</html>
