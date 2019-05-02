@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!--cssWidthHeight1.html-->
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		.div1{
+			background-color: lightcoral;
+			width: 300px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+		.img1{
+			background-color: beige;
+			width: 300px;
+			height: 200px;
+			border: 1px solid #00f;
+		}
+		.wh1{
+			background-color: beige;
+			max-width: 500px;
+			height: 200px;
+			border: 1px solid #f00;
+		}
+		.wh2{
+			background-color: beige;
+			max-width: 500px;
+			height: 200px;
+			border: 1px solid #00f;
+		}
+	</style>
+</head>
+<body>
+	<p>width 300px * height 200px</p>
+	<div class="div1">
+		<img class="img1" src="img2.jpg" alt="???">
+	</div>
+	<p>width 300px * height 200px</p>
+	<div class="div1">
+		<div class="wh1">화면(max-width:500px*200px)</div>
+	</div>
+	<p>width 300px * height 200px</p>
+	<div class="wh2">화면(max-width:500px*200px)</div>
+</body>
+</html>
