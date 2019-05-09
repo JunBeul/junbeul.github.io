@@ -1,0 +1,62 @@
+<!DOCTYPE html> <!--layout.html-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>레이아웃</title>
+	
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			line-height: 700%;
+		}
+		header{
+			background-color: aquamarine;
+			height: 25%;
+		}
+		nav{
+			background-color: bisque;
+			height: 50%;
+			width: 25%;
+		}
+		section{
+			background-color: coral;
+			height: 50%;
+			width: 50%;
+		}
+		aside{
+			background-color: burlywood;
+			height: 50%;
+			width: 25%;
+		}
+		.flo{
+			float: left;
+		}
+		footer{
+			clear: both;
+			background-color: dodgerblue;
+			height: 25%;
+		}
+	</style>
+</head>
+<body>
+	<div id="wapper">
+		<header>
+			header
+		</header>
+		<nav class="flo">
+			nav(Menu)
+		</nav>
+		<section class="flo">
+			Contents
+		</section>
+		<aside class="flo">
+			aside(Banner)
+		</aside>
+		<footer>
+			footer
+		</footer>
+	</div>
+</body>
+</html>
