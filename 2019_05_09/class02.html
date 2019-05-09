@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!--cssVis1.html-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		.dispinlin{
+			display: inline;
+			border: 1px solid #000;
+		}
+		.dispnone{
+			display: none;
+		}
+		.vishidden{
+			visibility: hidden;
+		}
+		table, tr, th, td{
+			border: 1px solid #000;
+			border-collapse: collapse;
+		}
+		.collpse{
+			visibility: collapse;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h4>1. 리스트아이템 '회원관리' 삭제 display=none</h4>
+		<ul>
+			<li class="dispinlin">로그인</li>
+			<li class="dispnone">회원가입</li>
+			<li class="dispinlin">사이트맵</li>
+		</ul>
+	
+		<h4>1. 리스트아이템 '회원관리' 숨기기 display=inline, visibility=hidden</h4>
+		<ul>
+			<li class="dispinlin">로그인</li>
+			<li class="dispinlin vishidden">회원가입</li>
+			<li class="dispinlin">사이트맵</li>
+		</ul>
+	</section>
+	
+	<section>
+		<h4>3. 보통 테이블</h4>
+		<table>
+			<tr>
+				<td>홍길동</td>
+				<td>이몽룡</td>
+			</tr>
+			<tr>
+				<td>성춘향</td>
+				<td>변사또</td>
+			</tr>
+		</table>
+	</section>
+	
+	<section>
+		<h4>4. 테이블에서 아래 row 삭제, collapsem visibility=collapse</h4>
+		<table>
+			<tr>
+				<td>홍길동</td>
+				<td>이몽룡</td>
+			</tr>
+			<tr class="collpse">
+				<td>성춘향</td>
+				<td>변사또</td>
+			</tr>
+		</table>
+	</section>
+</body>
+</html>
