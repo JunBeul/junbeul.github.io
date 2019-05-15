@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!--cssList2.html-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		ol li{
+			border: 1px solid #ccc;
+		}
+		.inside{
+			list-style: inside;
+		}
+		.outside{
+			list-style: outside;
+		}
+		.img{
+			list-style-image: url(lobster.png);
+		}
+		.char{
+			list-style: none;
+		}
+		.char li::before{
+			content: "# ";
+			padding-right: 0px;
+			color: red;
+		}
+		.all{
+			list-style: decimal-leading-zero;
+		}
+		.menu li{
+			list-style: none;
+			display: inline;
+			background-color: red;
+		}
+	</style>
+
+</head>
+
+<body>
+	<section>
+		<h3>목록</h3>
+		<ol class="inside">
+			<li>inside position</li>
+			<li>사과</li>
+			<li>배</li>
+			<li>포도</li>
+		</ol>
+		<ol class="outside">
+			<li>outside position</li>
+			<li>사과</li>
+			<li>배</li>
+			<li>포도</li>
+		</ol>
+		<ul class="img">
+			<li>img</li>
+			<li>사과</li>
+		</ul>
+		<ol class="char">
+			<li>기타문자</li>
+			<li>사과</li>
+			<li>배</li>
+			<li>포도</li>
+		</ol>
+		<ul class="all">
+			<li>한줄로</li>
+			<li>사과</li>
+			<li>배</li>
+			<li>포도</li>
+		</ul>
+		<ul class="menu">
+			<li>메뉴</li>
+			<li>로그인</li>
+			<li>회원가입</li>
+			<li>사이트맵</li>
+		</ul>
+	</section>
+</body>
+</html>
