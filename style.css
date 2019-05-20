@@ -1,0 +1,291 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/* Common */
+@font-face {
+font-family:ngwoff;
+src:url('/tpl/font/NanumGothic.woff')
+}
+@font_face {
+font-family:ngeot;
+src:url('/tpl/font/NanumGothic.eot');
+}
+@font-face {
+font-family:NanumGothic;
+src:url('/tpl/font/NanumGothic.ttf');
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0 }
+body, input, textarea, select, button, table { font-size:14px; line-height:1.25em; font-family:'나눔고딕', NanumGothic, Helvetica, AppleGothic, Sans-serif, ngwoff, ngeot, '굴림', gulrem; }
+html, body { height: 100%; padding:0; margin:0; }
+img, fieldset { border:0 }
+ul, ol { list-style:none }
+em, address { font-style:normal }
+a { text-decoration:none }
+a:hover, a:active, a:focus { text-decoration:none;}
+
+/*start*/
+#BG{
+	position: fixed;
+	z-index: -999;
+	align-content: center;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+#bgBlack{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: -990;
+	background-color: #000;
+	opacity: 0.5; 
+}
+#wrapper{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.top{
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 100%;
+	cursor: pointer;
+	position: fixed;
+	top: 93%;
+	left: 93%;
+	transform: translate(-50%, -50%);
+	transition: 0.3s;
+	opacity: 0;
+	z-index: 99;
+	display: flex;
+}
+.top:hover{
+	top: 92.5%;
+	box-shadow: 0 3px 30px #666;
+}
+.top > .topIcon1 {
+	position: absolute;
+	width: 6px;
+	height: 25px;
+	background-color: #333;
+	transform: translate(-50%, -50%);
+	transform: rotate(45deg);
+	left: 38%;
+	top: 20%;
+	border-radius: 3px;
+}
+.top > .topIcon2 {
+	position: absolute;
+	width: 6px;
+	height: 40px;
+	background-color: #333;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	border-radius: 3px;
+}
+.top > .topIcon3 {
+	position: absolute;
+	width: 6px;
+	height: 25px;
+	background-color: #333;
+	transform: translate(-50%, -50%);
+	transform: rotate(-45deg);
+	left: 55%;
+	top: 20%;
+	border-radius: 3px;
+}
+#title{
+	margin-bottom: 10px;
+	display: block;
+	text-align: center;
+	font-size: 5em;
+	color: #fff;
+	letter-spacing: 36px;
+}
+.subTitle{
+	text-align: center;
+	color: #fff;
+	font-size: 3em;
+	margin: 100px;
+	margin-bottom: 100px;
+	position: static;
+}
+.subTitle > span{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.special{
+	width: 170px;
+	height: 46px;
+	background-color: cadetblue;
+	transform: translate(-50%, -85%);
+	position: relative;
+	left: 50%;
+	border-radius: 23px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+.special > p{
+	line-height: 46px;
+	color: aliceblue;
+	position: relative;
+	font-size: 1.5em;
+	top: 0;
+	transition: 0.3s;
+}
+.special:hover > p{
+	position: relative;
+	top: -100%;
+}
+nav{
+	width: 900px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	position: relative;
+}
+nav > .navIcon{
+	width: 60px;
+	height: 60px;
+	position: relative;
+	transition: 0.3s;
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	transform: rotate(0deg);
+	top: 12.5%;
+}
+nav > .navIcon:hover{
+	transform: rotate(90deg);
+}
+nav > .navIcon > .icon{
+	width: 30px;
+	height: 5px;
+	background-color: #000;
+	position: relative;
+	transform: translate(-50%, -210%);
+	margin-bottom: 5px;
+	margin-top: 5px;
+	left: 50%;
+	top: 50%;
+	transition: 0.3s;
+}
+nav > .navList{
+	display: none;
+	height: 0;
+	text-align: center;
+	padding: 10px;
+	transition: 0.3s;
+	text-decoration: none;
+}
+nav > .navList > li{
+	margin-top: 20px;
+	position : relative;
+	font-family: sans-serif;
+}
+nav > .navList > li > a{
+	transition: 0.3s;
+	text-decoration: none;
+}
+nav > .navList > li > a:link{
+	text-decoration: none;
+	color: #000;
+}
+nav > .navList > li > a:visited{
+	text-decoration: none;
+	color: #000;
+}
+nav > .navList > li > a:active{
+	text-decoration: none;
+	color: #000;
+}
+.navList a:before, .navList a:after{
+    position: absolute;
+    opacity: 0;
+    font-size: 1.2em;
+    top: 1.5px;
+    transition: all 0.3s;
+}
+.navList a:before{
+    content: '(';
+	font-family: 'Raleway';
+    left: 380px;
+    transform: translateX(10px);
+}
+
+.navList a:after {
+    content: ')';
+	font-family: 'Raleway';
+    right: 380px;
+    transform: translateX(-10px);
+}
+.navList a:hover:before, .navList a:hover:after{
+    opacity: 1;
+    transform: translateX(0px);
+}
+nav > .navList > li > .navListLi{
+	cursor: pointer;
+	font-size: 16pt;
+}
+section > .element{
+	width: 900px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+section > .element > .fullList{
+	width: 900px;
+	position: relative;
+	clear: left;
+	transform: translate(-50%, 0);
+	left: 50%;
+}
+section > .element > .fullList > .aTitle{
+	width: 900px;
+	height: 80px;
+	font-size: 1.8em;
+	line-height: 80px;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+	transform: translate(-50%, 0);
+	left: 50%;
+	border-top: 1px solid #ccc;
+}
+section > .element > .fullList > a > li{
+	width: 240px;
+	height: 240px;
+	font-family: 'Raleway', sans-serif;
+	line-height: 340px;
+	font-size: 1.8em;
+	padding: 30px;
+	background-color: #fff;
+	display: inline-block;
+	position: relative;
+	float:left;
+	transition: 0.3s;
+}
+section > .element > .fullList > a > li:hover{
+	background-color: #ccc;
+}
+.clear {
+	clear: both;
+}
+footer{
+	background-color: #ccc;
+	width: 900px;
+	height: 300px;
+	display: inline-block;
+	position: relative;
+	transform: translate(-50%, 0);
+	left: 50%;
+	text-align: center;
+	line-height: 300px;
+	font-size: 1.8em;
+}
