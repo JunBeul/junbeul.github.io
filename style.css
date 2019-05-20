@@ -20,7 +20,7 @@ img, fieldset { border:0 }
 ul, ol { list-style:none }
 em, address { font-style:normal }
 a { text-decoration:none }
-a:hover, a:active, a:focus { text-decoration:underline }
+a:hover, a:active, a:focus { text-decoration:none;}
 
 /*start*/
 #BG{
@@ -58,6 +58,8 @@ a:hover, a:active, a:focus { text-decoration:underline }
 	transform: translate(-50%, -50%);
 	transition: 0.3s;
 	opacity: 0;
+	z-index: 99;
+	display: flex;
 }
 .top:hover{
 	top: 92.5%;
@@ -114,6 +116,30 @@ a:hover, a:active, a:focus { text-decoration:underline }
 .subTitle > span{
 	margin-left: 50px;
 	margin-right: 50px;
+}
+.special{
+	width: 170px;
+	height: 46px;
+	background-color: cadetblue;
+	transform: translate(-50%, -85%);
+	position: relative;
+	left: 50%;
+	border-radius: 23px;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+.special > p{
+	line-height: 46px;
+	color: aliceblue;
+	position: relative;
+	font-size: 1.5em;
+	top: 0;
+	transition: 0.3s;
+}
+.special:hover > p{
+	position: relative;
+	top: -100%;
 }
 nav{
 	width: 900px;
