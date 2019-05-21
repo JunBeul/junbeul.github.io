@@ -27,4 +27,16 @@ $(document).ready(function() {
 	} else {
 		alert("Not Found!!");
 	}*/
+	
+	var url = "https://junbeul.github.io/portfolio/index.html";
+	
+	$('.facebook').click(function(){
+		window.open("http://www.facebook.com/sharer.php?u="+url, 300, 250);
+	});
+	$('.twitter').click(function(){
+		window.open("http://twitter.com/intent/tweet?text="+url, 300, 250);
+	});
+	$('.Google_plus').click(function(){
+		window.open("https://plus.google.com/share?url="+url, 300, 250);
+	});
 });
