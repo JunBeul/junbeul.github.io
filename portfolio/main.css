@@ -281,6 +281,33 @@ header > .slogan{
 footer{
 	/*text-align: center;
 	line-height: 50;*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+footer > .ftext{
+	background-color: #1e1d1e;
+	z-index: 10;
+	position: absolute;
+	color: #f4f3f4;
+	transform: translate(-100%, -50%);
+	padding-left: 30px;
+	padding-right: 30px;
+	line-height: 1.4em;
+	display: inline-block;
+	font-size: 3.5em;
+	white-space:nowrap;
+}
+
+footer > .f1{
+	top: 42%;
+	left: 82%;
+}
+
+footer > .f2{
+	top: 58%;
+	left: 82%;
 }
 
 footer > .footerbg{
@@ -291,10 +318,49 @@ footer > .footerbg{
 	left: 50%;
 }
 
-footer > a > .facebook{
+footer > p{
+	color: #1e1d1e;
+	font-family: "CenturyGothicBold", sans-serif;
+	font-size: 2.2em;
 	position: absolute;
-	transform: translate(-50%, -50%);
-	top: 50%;
-	left: 50%;
-	z-index: 100;
+	left: 15%;
+	top: 77.5%;
+}
+
+footer > .footerUnderLine{
+	width: 200px;
+	height: 2px;
+	background-color: #1e1d1e;
+	position: absolute;
+	top: 85%;
+	left: 15%;
+}
+
+footer > .sharBox{
+	width: auto;
+	height: auto;
+	position: absolute;
+	top: 87%;
+	left: 15%;
+}
+
+footer > .sharBox > .Sharing{
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+footer > .sharBox > .facebook{
+	cursor: pointer;
+	border-radius: 100%;
+}
+
+footer > .sharBox > .twitter{
+	cursor: pointer;
+	border-radius: 100%;
+}
+
+footer > .sharBox > .Google_plus{
+	cursor: pointer;
+	border-radius: 100%;
 }
