@@ -206,15 +206,21 @@ header > .slogan{
 	position: relative;
 	transform: translate(-50%, -50%);
 	left: 50%;
-	top: 50%;
+	top: 100px;
 	transition-duration: 0.5s;
 }
 
 .contents > article > .Specification:hover > .Explanation{
-	top: -53.25%;
+	top: -107px;
+}
+
+.contents > article > .Specification:hover > .Explanation > .expText{
+	top: 110px;
 }
 
 .contents > article > .Specification > .Explanation > .black{
+	margin: 0;
+	padding: 0;
 	width: 100%;
 	height: 100%;
 	background-color: #1e1d1e;
@@ -224,8 +230,9 @@ header > .slogan{
 .contents > article > .Specification > .Explanation > .expText{
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 150%;
 	transform: translate(-50%, -50%);
+	transition-duration: 1s;
 }
 
 .contents > article > .Specification > .Explanation > .expText > h3{
@@ -250,13 +257,15 @@ header > .slogan{
 
 .contents3 > h1{
 	position: absolute;
-	left: 53.5%;
+	left: 50%;
 	top: 15%;
 	transform: translate(-50%, -50%);
 	color: #f4f3f4;
 }
 
 .contents3 > ul{
+	margin: 0;
+	padding: 0;
 	list-style: none;
 	position: absolute;
 	left: 50%;
@@ -270,6 +279,22 @@ header > .slogan{
 }
 
 footer{
-	text-align: center;
-	line-height: 50;
+	/*text-align: center;
+	line-height: 50;*/
+}
+
+footer > .footerbg{
+	height: 120%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+}
+
+footer > a > .facebook{
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	z-index: 100;
 }
