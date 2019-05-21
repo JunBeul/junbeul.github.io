@@ -349,7 +349,7 @@
 		 */
 
 		var bindMouseWheelEvent = function() {
-			$(window).bind('wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs MozMousePixelScroll.fsvs', mouseWheelHandler );
+			$(window).bind('wheel.fsvs mousewheel.fsvs DOMMouseScroll.fsvs  MozMousePixelScroll.fsvs', mouseWheelHandler );
 		};
 
 		/**
