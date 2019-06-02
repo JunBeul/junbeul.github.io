@@ -20,6 +20,26 @@
     font-style: normal;
 
 }
+
+::-webkit-scrollbar{
+	width: 20px;
+}
+::-webkit-scrollbar-track {
+	background-color:#f4f3f4;
+}
+::-webkit-scrollbar-thumb {
+	background-color:#1e1d1e;
+	border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: #1e1d1e;
+}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+	width:20px;
+	height:20px;
+	background:#1e1d1e;
+}
+
 *{
 	font-family: 'Nanum Gothic', sans-serif;
 	color: #f4f3f4;
@@ -34,7 +54,7 @@ nav > a > img{
 	position: fixed;
 	top: 40px;
 	left: 40px;
-	color: #fff;
+	color: #f4f3f4;
 	z-index: 99;
 	transition: 0.2s;
 	/*cursor: pointer;*/
@@ -44,6 +64,91 @@ nav > a > img{
 /*nav:hover{
 	box-shadow: #666 0px 5px 20px; 
 }*/
+.infoBlack{
+	width: 100%;
+	height: 100%;
+	background-color: #1e1d1e;
+	position: fixed;
+	z-index: 100;
+	opacity: 0.6;
+	display: none;
+}
+.moreInformation{
+	width: 90%;
+	height: 75%;
+	background-color: #f4f3f4;
+	z-index: 110;
+	transform: translate(-50%, 0);
+	position: fixed;
+	left: 50%;
+	transition: 0.5s;
+	bottom: -100%;
+}
+.moreInformation > .closebut{
+	height: 50px;
+	width: 50px;
+	position: relative;
+	top: -50px;
+	left: 100%;
+	transform: translate(-100%, 0);
+	cursor: pointer;
+}
+.moreInformation > .closebut > .close1 {
+	background-color: #f4f3f4;
+	height: 40px;
+	width: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	transition: 0.2s;
+}
+.moreInformation > .closebut > .close2 {
+	background-color: #f4f3f4;
+	height: 40px;
+	width: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	transition: 0.2s;
+}
+.moreInformation > .closebut:hover{
+	transform: translate(-100%, 0) rotate(180deg);
+}
+.moreInformation > .closebut:hover > .close1{
+	transform: translate(-50%, -50%) rotate(-45deg);
+	height: 20px;
+	left: 63%;
+}
+.moreInformation > .closebut:hover > .close2{
+	transform: translate(-50%, -50%) rotate(45deg);
+	height: 20px;
+	left: 37%;
+}
+.infoMain {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+}
+.info {
+	z-index: 150;
+	width: 50%;
+	height: 100%;
+	padding: 25px;
+	float: left;
+	color: #1e1d1e;
+	text-align: center;
+}
+.info>*{
+	color: #000;
+}
+.infoImg::before{
+	content: "";
+	clear: both;
+}
 header{
 	/*background-image: url(img/%EB%8C%80%EC%A7%80%201.png);
 	background-size: cover;*/
@@ -55,7 +160,8 @@ header > .titleName{
 	line-height: 56pt;
 	position: absolute;
 	top: 195px;
-	left: 40px;
+	left: -120px;
+	transition: 1s;
 }
 header > .titleImg{
 	height: 80%;
@@ -63,6 +169,7 @@ header > .titleImg{
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	display: none;
 }
 header > .logo{
 	position: absolute;
@@ -106,7 +213,10 @@ header > .slogan{
 	top: 20%;
 	font-size: 5em;
 	color: #f4f3f4;
+	display: none;
 }
+
+
 .contents1 > p{
 	font-size: 1.2em;
 	position: absolute;
@@ -114,6 +224,7 @@ header > .slogan{
 	left: 50%;
 	top: 50%;
 	color: #f4f3f4;
+	display: none;
 }
 .contents1 >.text {
 	color: #f4f3f4;
@@ -150,28 +261,31 @@ header > .slogan{
 .center > .text1{
 	font-family: 'Covered By Your Grace', cursive;
 	font-size: 2em;
+	display: none;
 }
 .center > .text2{
 	font-family: 'Covered By Your Grace', cursive;
 	font-size: 3.5em;
 	font-weight: 600;
 	line-height: 0.5em;
+	display: none;
 }
 .center > .text3{
 	font-size: 1.2em;
 	margin-top: 60px;
+	display: none;
 }
 
 .year{
 	font-family: "CenturyGothicBold", sans-serif;
-	font-size: 5em;
+	font-size: 30em;
 	color: #f4f3f4;
-	transform: rotate(180deg);
 	position: relative;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	transform: rotate(270deg);
-	left: -42.5%;
+	bottom: -80%;
+	left: -40%;
+	transform: translate(0, -100%) rotate(90deg);
+	/*transform: rotate(270deg);*/
+	opacity: 0.5;
 }
 
 .contents{
@@ -182,7 +296,7 @@ header > .slogan{
 }
 
 .contents > article{
-	width: 1080px;
+	width: 1260px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -190,32 +304,33 @@ header > .slogan{
 }
 
 .contents > article > .Specification{
-	margin: 20px;
-	width: 320px;
-	height: 200px;
+	margin: 10px;
+	width: 400px;
+	height: 250px;
 	float: left;
 	overflow: hidden;
 	cursor: pointer;
+	position: relative;
 }
 
 .contents > article > .Specification > .Explanation{
-	width: 320px;
-	height: 200px;
+	width: 400px;
+	height: 250px;
 	margin: 0;
 	text-align: center;
 	position: relative;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -100%);
 	left: 50%;
-	top: 100px;
+	top: 100%;
 	transition-duration: 0.5s;
 }
 
 .contents > article > .Specification:hover > .Explanation{
-	top: -107px;
+	top: -2.5%;
 }
 
 .contents > article > .Specification:hover > .Explanation > .expText{
-	top: 110px;
+	top: 50%;
 }
 
 .contents > article > .Specification > .Explanation > .black{
@@ -256,14 +371,23 @@ header > .slogan{
 }
 
 .contents3 > h1{
+	font-family: "CenturyGothicBold", sans-serif;
+	font-size: 3em;
 	position: absolute;
 	left: 50%;
 	top: 15%;
 	transform: translate(-50%, -50%);
 	color: #f4f3f4;
 }
+.contents3 > .certificate {
+	position: absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	height: 60%;
+}
 
-.contents3 > ul{
+/*.contents3 > ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -276,7 +400,7 @@ header > .slogan{
 
 .contents3 > ul > li{
 	margin: 10px;
-}
+}*/
 
 footer{
 	/*text-align: center;
@@ -311,7 +435,7 @@ footer > .f2{
 }
 
 footer > .footerbg{
-	height: 120%;
+	height: 130%;
 	position: absolute;
 	transform: translate(-50%, -50%);
 	top: 50%;
