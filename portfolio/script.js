@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$('.titleImg').fadeIn(1000);
+	$('.titleName').css('left', '40px');
+	
 	var slider = $.fn.fsvs({
 		speed : 700,
 		bodyID : 'fsvs-body',
@@ -18,6 +21,13 @@ $(document).ready(function() {
 		detectHash : true
 	});
 	
+	$('nav').click(function() {
+		alert("수정하는 중 입니다.");
+        $('#fullpage').animate({
+			scrollTop : 0
+		}, 600);
+    });
+	
 	var linked = $(location).attr('href');
 	
 	/*if (linked.indexOf("slide-1") != -1) {
@@ -33,10 +43,22 @@ $(document).ready(function() {
 	$('.facebook').click(function(){
 		window.open("http://www.facebook.com/sharer.php?u="+url, 300, 250);
 	});
+	
 	$('.twitter').click(function(){
 		window.open("http://twitter.com/intent/tweet?text="+url, 300, 250);
 	});
+	
 	$('.Google_plus').click(function(){
 		window.open("https://plus.google.com/share?url="+url, 300, 250);
+	});
+	
+	$('.Specification').click(function(){
+		$('.moreInformation').css('bottom','0%');
+		$('.infoBlack').fadeIn();
+	});
+	
+	$('.closebut').click(function(){
+		$('.moreInformation').css('bottom','-100%');
+		$('.infoBlack').fadeOut();
 	});
 });
