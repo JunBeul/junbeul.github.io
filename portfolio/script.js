@@ -21,12 +21,10 @@ $(document).ready(function() {
 		detectHash : true
 	});
 	
+	var url = "http://html5tech.info/exam_game/canvas-tetris-master/"; 
 	$('nav').click(function() {
-		alert("수정하는 중 입니다.");
-        $('#fullpage').animate({
-			scrollTop : 0
-		}, 600);
-    });
+		$('nav').attr('href',url);
+   	});
 	
 	var linked = $(location).attr('href');
 	
