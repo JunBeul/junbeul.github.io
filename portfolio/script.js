@@ -22,9 +22,10 @@ $(document).ready(function() {
 	});
 	
 	var url = "http://html5tech.info/exam_game/canvas-tetris-master/"; 
-	$('nav').click(function() {
-		$('nav').attr('href',url);
-   	});
+	$('nav').attr('href',url);
+	/*$('nav').click(function() {
+		
+   	});*/
 	
 	var linked = $(location).attr('href');
 	
